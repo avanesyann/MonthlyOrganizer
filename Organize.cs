@@ -18,7 +18,21 @@
 
             foreach (var file in files)
             {
-                Console.WriteLine($"Last write time: {file.LastWriteTime.Month} {file.LastWriteTime.Year}");
+                string folderName = $"{file.LastWriteTime.Month.ToString("D2")}.{file.LastWriteTime.Year.ToString()}";
+                string directory = CreateDirectory(folderName);
+                string newDirectory = Path.Combine(directory, file.Name);
+
+                if (!File.Exists(newDirectory))
+                {
+                    try
+                    {
+                        file.MoveTo(newDirectory);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error moving file {file.Name}: {ex.Message}");
+                    }
+                }
             }
         }
 
