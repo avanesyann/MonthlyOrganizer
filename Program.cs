@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // Change this to your folder's path
-            string path = @"C:\Users\Me\Desktop\recordings";
+            string path = @"C:\Users\You\Desktop\recordings";
 
             Organize organize = new Organize(path);
 
