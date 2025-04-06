@@ -6,12 +6,28 @@ namespace MonthlyOrganizer
     {
         private DirectoryInfo UserDirectory { get; }
 
-        public Organize(string path)
+        public Organize()
         {
-            if (Directory.Exists(path))
-                UserDirectory = new DirectoryInfo(path);
+            string settingsFilePath = "settings.txt";
+
+            if (File.Exists(settingsFilePath))
+            {
+                string path = File.ReadAllText(settingsFilePath).Trim();
+
+                if (Directory.Exists(path))
+                {
+                    UserDirectory = new DirectoryInfo(path);
+                    Console.WriteLine($"Directory set to: {path}");
+                }
+                else
+                {
+                    throw new DirectoryNotFoundException($"The directory from {settingsFilePath} does not exist.");
+                }
+            }
             else
-                throw new DirectoryNotFoundException("The directory does not exist.");
+            {
+                throw new FileNotFoundException("Settings file not found.");
+            }
         }
 
         public void StartWatching()

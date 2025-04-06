@@ -5,10 +5,7 @@ namespace MonthlyOrganizer
     {
         static void Main(string[] args)
         {
-            // Change this to your folder's path
-            string path = @"C:\Users\You\Desktop\recordings";
-
-            Organize organizer = new Organize(path);
+            Organize organizer = new Organize();
             organizer.StartWatching();
         }
     }
