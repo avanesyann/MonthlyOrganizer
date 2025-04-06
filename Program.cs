@@ -1,4 +1,5 @@
-﻿namespace MonthlyOrganizer
+﻿
+namespace MonthlyOrganizer
 {
     internal class Program
     {
@@ -7,9 +8,8 @@
             // Change this to your folder's path
             string path = @"C:\Users\You\Desktop\recordings";
 
-            Organize organize = new Organize(path);
-
-            organize.OrganizeByMonth();
+            Organize organizer = new Organize(path);
+            organizer.StartWatching();
         }
     }
 }
