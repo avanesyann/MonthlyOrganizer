@@ -69,7 +69,7 @@ namespace MonthlyOrganizer
 
                 try
                 {
-                    Thread.Sleep(500);
+                    Thread.Sleep(100);
                     file.MoveTo(newDirectory);
                     Console.WriteLine($"Moved {file.Name} to {folderName} folder.");
                 }

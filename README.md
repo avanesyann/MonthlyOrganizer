@@ -27,8 +27,8 @@ A simple C# console application to organize files by their date of creation.
 ### 1. **Download the Program**
 
 ### 2. **Prepare the `settings.txt` File**
-	- Locate the `settings.txt` file in the same folder as the program's executable.
-	- Open the `settings.txt` file with a text editor.
-	- Enter the path to the folder you want to monitor.
+- Locate the `settings.txt` file in the same folder as the program's executable.
+- Open the `settings.txt` file with a text editor.
+- Enter the path to the folder you want to monitor.
 
 ### 3. **Run the Program**
