@@ -14,8 +14,12 @@ A simple C# console application to organize files by their date of creation.
 - Implemented a FileSystemWatcher.
 - Now everty time a new recording is created, it is moved instantly to its corresponding folder.
 
-### :new: Version 0.4
+### :arrows_counterclockwise: Version 0.4
 - Implemented a configuration file settings.txt to store the user directory externally.
+
+### :new: Version 0.4.1
+- Fixed an issue where settings.txt couldn’t be found when the program was launched from another location.
+- The program now always reads settings.txt from the same directory as the .exe, regardless of how it’s started.
 
 ## :bulb: Future Plans
 - ~~Implement a FileSystemWatcher to move newly created files instantly.~~

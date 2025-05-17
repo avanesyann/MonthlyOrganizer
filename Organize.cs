@@ -8,7 +8,13 @@ namespace MonthlyOrganizer
 
         public Organize()
         {
-            string settingsFilePath = "settings.txt";
+            string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string settingsFilePath = Path.Combine(exeDirectory, "settings.txt");
+
+            string targetDirectory = File.ReadAllText(settingsFilePath);
+
+            Console.WriteLine(settingsFilePath);
+            Console.WriteLine(targetDirectory);
 
             if (File.Exists(settingsFilePath))
             {
